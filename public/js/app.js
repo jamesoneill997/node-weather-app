@@ -30,9 +30,9 @@ try {
                 messageThree.textContent = ''
             }
             else{
-                messageOne.textContent = 'Location: ' + data.address
+                messageOne.textContent = 'Location: ' + data.address + ' || Local time: ' + data.time
                 messageTwo.textContent =  'Temperature: ' + data.temp
-                messageThree.textContent = 'Conditions: '+ data.conditions[0]
+                messageThree.textContent = 'Conditions: '+ data.conditions
                 console.log(data)
             }
         })

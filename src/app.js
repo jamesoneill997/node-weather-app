@@ -65,9 +65,10 @@ app.get('/weather', (req,res)=>{
                 }
                 else{
                     const results ={
-                        address: req.query.address,
-                        temp : response.temperature+' degrees celcius',
-                        conditions : response.weather_descriptions
+                        address: response.location.name + ', ' + response.location.country, 
+                        time: response.location.localtime,
+                        temp : response.current.temperature+' degrees celcius',
+                        conditions : response.current.weather_descriptions[0]
                     }
                     return res.send(results)
                 }

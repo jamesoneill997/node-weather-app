@@ -11,7 +11,7 @@ const forecast = (lat, long,  callback)=>{
             callback(err.info, undefined)
         }
         else{
-            callback(undefined, body.current)
+            callback(undefined, body)
         }
     })
 
