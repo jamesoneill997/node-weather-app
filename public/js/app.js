@@ -12,6 +12,8 @@ try {
         const location = search.value
 
         messageOne.textContent = 'Loading...'
+        messageTwo.textContent = ''
+        messageThree.textContent = ''
 
         if (location.includes(';')){
             messageOne.textContent = 'Place does not exist. Please check spelling and try again.'
