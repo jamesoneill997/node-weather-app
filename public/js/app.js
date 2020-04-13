@@ -37,31 +37,8 @@ try {
                 messageOne.textContent = 'Location: ' + data.address + ' || Local time: ' + data.time
                 messageTwo.textContent =  'Temperature: ' + data.temp
                 messageThree.textContent = 'Conditions: '+ data.conditions
-                if (data.conditions === 'Clear') {
-                    resultImage.innerHTML = '<img id="weather-image" src="/img/clear.jpg" alt="Clear Image">'
 
-                } else if(data.conditions === 'Sunny') {
-                    resultImage.innerHTML = '<img id="weather-image" src="/img/sunny.jpg" alt="Other Image">'
-                }
-                
-                else if(data.conditions === 'Hazy') {
-                    resultImage.innerHTML = '<img id="weather-image" src="/img/hazy.jpg" alt="Other Image">'
-                }
-                
-                else if(data.conditions === 'Rain') {
-                    resultImage.innerHTML = '<img id="weather-image" src="/img/rainy.jpg" alt="Other Image">'
-                }
-
-                else if(data.conditions === 'Partly cloudy') {
-                    resultImage.innerHTML = '<img id="weather-image" src="/img/partly-cloudy.jpeg" alt="Other Image">'
-                }
-                else if(data.conditions === 'Thundery outbreaks possible') {
-                    resultImage.innerHTML = '<img id="weather-image" src="/img/thunder.jpg" alt="Other Image">'
-                }
-                
-                else{
-                    resultImage.innerHTML = ''
-                }
+                resultImage.innerHTML = '<img id="weather-image" src="/img/' + data.conditions.replace(/ /g,'') + '.jpg" alt="' + data.conditions + 'Image">'
                 
 
                 console.log(data)
