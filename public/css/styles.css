@@ -63,3 +63,7 @@ button{
 a{
     font-size: 30px;
 }
+
+#weather-image{
+    max-width: 300px;
+}
